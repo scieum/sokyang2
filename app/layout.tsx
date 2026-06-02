@@ -28,12 +28,20 @@ export default function RootLayout({
               <span className="text-xl">🏔️</span>
               <span className="font-bold text-forest-800">속초 와일드맵</span>
             </Link>
-            <Link
-              href="/guide"
-              className="text-sm font-medium text-forest-600 hover:text-forest-800"
-            >
-              도감
-            </Link>
+            <nav className="flex items-center gap-4 text-sm font-medium text-forest-600">
+              <Link href="/guide" className="hover:text-forest-800">
+                도감
+              </Link>
+              <Link href="/map" className="hover:text-forest-800">
+                흔적지도
+              </Link>
+              <Link href="/report" className="hover:text-forest-800">
+                제보
+              </Link>
+              <Link href="/news" className="hover:text-forest-800">
+                뉴스
+              </Link>
+            </nav>
           </div>
         </header>
 
