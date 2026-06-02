@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import StatusBadge from "@/components/StatusBadge";
+import { asset } from "@/lib/asset";
 import { getAllSpecies, getSpeciesById } from "@/lib/species";
 
 export function generateStaticParams() {
@@ -39,7 +40,7 @@ export default function SpeciesDetailPage({
       <div className="overflow-hidden rounded-3xl border border-forest-100 bg-white">
         <div className="relative h-56 w-full bg-forest-50">
           <Image
-            src={species.image}
+            src={asset(species.image)}
             alt={`${species.name} 대표 이미지`}
             fill
             sizes="(max-width: 768px) 100vw, 768px"
